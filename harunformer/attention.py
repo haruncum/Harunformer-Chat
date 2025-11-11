@@ -1,12 +1,28 @@
 import numpy as np
 
 def softmax(x):
-    exp_x = np.exp(x - np.max(x, axis=-1, keepdims=True))
-    return exp_x / np.sum(exp_x, axis=-1, keepdims=True)
+    x = x - np.max(x, axis=-1, keepdims=True)
+    e = np.exp(x)
+    return e / e.sum(axis=-1, keepdims=True)
 
-def self_attention(x, Wq, Wk, Wv):
+def self_attention(x):
+    """
+    x: (seq_len, embed_dim)
+    Basit self-attention: Q = K = V = x
+    """
     d = x.shape[-1]
-    Q, K, V = x @ Wq, x @ Wk, x @ Wv
-    scores = (Q @ K.T) / np.sqrt(d)
-    weights = softmax(scores)
-    return weights @ V
+
+    Q = x
+    K = x
+    V = x
+
+    # Attention skorları
+    scores = Q @ K.T / np.sqrt(d)  # (seq_len, seq_len)
+
+    # Ağırlıklar (softmax)
+    weights = softmax(scores)      # (seq_len, seq_len)
+
+    # Çıktı = ağırlıklı toplam
+    out = weights @ V              # (seq_len, embed_dim)
+
+    return out, weights

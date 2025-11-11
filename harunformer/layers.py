@@ -6,12 +6,13 @@ def layer_norm(x, eps=1e-5):
     std = np.std(x, axis=-1, keepdims=True)
     return (x - mean) / (std + eps)
 
-def feed_forward(x, W1, W2):
-    return np.maximum(0, x @ W1) @ W2
-
-def transformer_block(x, params):
-    Wq, Wk, Wv, W1, W2 = params
-    attn_out = self_attention(x, Wq, Wk, Wv)
+def transformer_block(x):
+    """
+    Basitleştirilmiş bir Transformer encoder bloğu:
+      - Self-Attention
+      - Residual connection
+      - Layer Normalization
+    """
+    attn_out, _ = self_attention(x)
     x = layer_norm(x + attn_out)
-    ff_out = feed_forward(x, W1, W2)
-    return layer_norm(x + ff_out)
+    return x
