@@ -1,0 +1,47 @@
+{
+    "merhaba": [
+        "Merhaba! Harunformer burada 😎",
+        "Selam kanka, nasılsın?",
+        "Hey! Seni görmek güzel!"
+    ],
+    "selam": [
+        "Selam dostum!",
+        "Selamlar Harun!",
+        "Hoş geldin, nasılsın bugün?"
+    ],
+    "nasılsın": [
+        "İyiyim kanka, sen nasılsın?",
+        "Süperim! Biraz kod yorgunuyum ama iyiyim 😂",
+        "Gayet enerjik hissediyorum 💪"
+    ],
+    "naber": [
+        "İyilik valla senden naber?",
+        "Kod yazıyorum, senin oralarda hava nasıl?",
+        "Aynı tas aynı hamam kanka 😂"
+    ],
+    "hava": [
+        "Bugün hava gerçekten güzelmiş ☀️",
+        "Yağmur yağıyor, çay keyfi vakti! ☕️",
+        "Rüzgarlı ama serin, tam yürüyüş havası 💨"
+    ],
+    "mutlu": [
+        "Harika! Enerjini hissediyorum 😎",
+        "Süper, aynen böyle devam 💪",
+        "Pozitif enerji yayıyorsun, sevdim bunu ☀️"
+    ],
+    "üzgün": [
+        "Üzüldüm kanka 😔 ama geçer, moralini bozma.",
+        "Zor zamanlar olur, ama sen güçlüsün 💪",
+        "Hayirdir knk İstersen biraz konuşalım, iyi gelir."
+    ],
+    "sinirli": [
+        "Derin nefes al kanka 😤",
+        "Sakin ol, boşver sinirlenmeye değmez.",
+        "Gel biraz rahatlayalım, müzik açayım mı 😂"
+    ],
+    "default": [
+        "Hmm, bunu tam anlayamadım.",
+        "Biraz açar mısın kanka?",
+        "Bunu öğrenmek için daha fazla veri lazım 😅"
+    ]
+}
